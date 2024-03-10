@@ -35,8 +35,9 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Train the Model
+      working-directory: flower_classification_project
       run: |
-        python flower_classification_project/flower_classification_model/train_pipeline.py
+        python flower_classification_model/train_pipeline.py
     - name: Package the build
       working-directory: flower_classification_project
       run: |
