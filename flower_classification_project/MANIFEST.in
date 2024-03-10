@@ -3,13 +3,13 @@ include *.md
 include *.pkl
 recursive-include ./flower_classification_model *
 
-include flower_classification_model/datasets/bike-rental-dataset.csv
+include flower_classification_model/datasets/Iris.csv
 include flower_classification_model/datasets/test.csv
 include flower_classification_model/trained_models/*.pkl
 include flower_classification_model/VERSION
 include flower_classification_model/config.yml
 
-include ./requirements.txt
+include ./requirements/requirements.txt
 exclude *.log
 exclude *.cfg
 
