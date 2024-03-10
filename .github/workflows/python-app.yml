@@ -46,10 +46,11 @@ jobs:
       run: |
         cp flower_classification_project/dist/*.whl flower_classification_project/flower_classification_api/.
     - name: Build Docker Image
+      working-directory: flower_classification_project
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER_NAME}}
       run: |
-        docker build -t $DOCKER_USER/flower_classification_api flower_classification_project/flower_classification_model_api/.
+        docker build -t $DOCKER_USER/flower_classification_api flower_classification_model_api/.
     - name: Login to DockerHub
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER_NAME}}
