@@ -50,7 +50,7 @@ jobs:
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER_NAME}}
       run: |
-        docker build -t $DOCKER_USER/flower_classification_api flower_classification_model_api/.
+        docker build -t $DOCKER_USER/flower_classification_api flower_classification_model_api/
     - name: Login to DockerHub
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER_NAME}}
